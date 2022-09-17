@@ -191,14 +191,22 @@ export function Home() {
   );
 }
 
+export function Projects() {
+  return (
+    <div>
+      <Header />
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<h1>About</h1> }/>
-            <Route path="/projects" element={<h1>Projects</h1>} />
+            <Route path="/about" element={<Home /> }/>
+            <Route path="/projects" element={<Projects />} />
             <Route path="/login" element={<h1>Login</h1>} />
         </Routes>
       </Router>
