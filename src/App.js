@@ -1,6 +1,12 @@
 import "./reset.css";
 import "./styles.css";
 import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import {
   ChatbubblesOutline,
   SunnyOutline,
   TrophyOutline,
@@ -104,7 +110,9 @@ export function Card(props) {
 }
 
 export function HeaderItem(props) {
-  return <li className="nav-item">{props.name}</li>;
+  return <li className="nav-item">
+    <Link to={props.link}>{props.name}</Link>
+  </li>;
 }
 
 export function Header() {
@@ -112,9 +120,9 @@ export function Header() {
     <header class="header">
       <nav class="header-nav">
         <ul class="nav-items">
-          <HeaderItem name="About" />
-          <HeaderItem name="Projects" />
-          <HeaderItem name="Login" />
+          <HeaderItem name="About" link="/about" />
+          <HeaderItem name="Projects" link="/projects" />
+          <HeaderItem name="Login" link="/login" />
         </ul>
       </nav>
     </header>
@@ -133,54 +141,67 @@ export function DetailedItem(props) {
   );
 }
 
+export function Home() {
+  return (<div>
+    <main className="app-content">
+      <Header />
+      <h1>
+        Creating a <mark>Sustainable</mark> Future
+      </h1>
+      <p>
+        The 21st century has lead to astronomical technological developments
+        at an exponential rate.
+      </p>
+      <p>
+        At the same time, our planet is filled with toxic waste that damages
+        ecosystems at scale.
+      </p>
+      <p>What if we can change that?</p>
+      <div class="tags">
+        <TaggedItem text="other" />
+        <TaggedItem text="paper" />
+        <TaggedItem text="glass" />
+        <TaggedItem text="cotton" />
+        <TaggedItem text="polyester" />
+        <TaggedItem text="metal" />
+        <TaggedItem text="electronics" />
+        <TaggedItem text="wood" />
+        <TaggedItem text="plastic" />
+      </div>
+      <ComboBox />
+    </main>
+    <div class="details">
+    <DetailedItem
+        icon={<SunnyOutline width="36px" height="36px" color={"#3fc486"} />}
+        title="Your impact"
+        desc="Learn statistics such as how much the product is produced a year, how likely it is to be in a landfill vs recycling center, and what the product is composed of."
+      />
+      <DetailedItem
+        icon={<ChatbubblesOutline width="36px" height="36px" color={"#3fc486"} />}
+        title="Invite friends"
+        desc="Create your own 100% recycled project from scratch with the help of your friends, and earn points for every recycled item."
+      />
+      <DetailedItem
+        icon={<TrophyOutline width="36px" height="36px" color={"#3fc486"} />}
+        title="Earn awards"
+        desc="Compete on a global leaderboard, make your community proud, and earn awards for your achievements."
+      />
+    </div>
+  </div>
+  );
+}
+
 export default function App() {
   return (
     <div className="App">
-      <main className="app-content">
-        <Header />
-        <h1>
-          Creating a <mark>Sustainable</mark> Future
-        </h1>
-        <p>
-          The 21st century has lead to astronomical technological developments
-          at an exponential rate.
-        </p>
-        <p>
-          At the same time, our planet is filled with toxic waste that damages
-          ecosystems at scale.
-        </p>
-        <p>What if we can change that?</p>
-        <div class="tags">
-          <TaggedItem text="other" />
-          <TaggedItem text="paper" />
-          <TaggedItem text="glass" />
-          <TaggedItem text="cotton" />
-          <TaggedItem text="polyester" />
-          <TaggedItem text="metal" />
-          <TaggedItem text="electronics" />
-          <TaggedItem text="wood" />
-          <TaggedItem text="plastic" />
-        </div>
-        <ComboBox />
-        
-      </main>
-      <div class="details">
-      <DetailedItem
-          icon={<SunnyOutline width="36px" height="36px" color={"#3fc486"} />}
-          title="Your impact"
-          desc="Learn statistics such as how much the product is produced a year, how likely it is to be in a landfill vs recycling center, and what the product is composed of."
-        />
-        <DetailedItem
-          icon={<ChatbubblesOutline width="36px" height="36px" color={"#3fc486"} />}
-          title="Invite friends"
-          desc="Create your own 100% recycled project from scratch with the help of your friends, and earn points for every recycled item."
-        />
-        <DetailedItem
-          icon={<TrophyOutline width="36px" height="36px" color={"#3fc486"} />}
-          title="Earn awards"
-          desc="Compete on a global leaderboard, make your community proud, and earn awards for your achievements."
-        />
-      </div>
+      <Router>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<h1>About</h1> }/>
+            <Route path="/projects" element={<h1>Projects</h1>} />
+            <Route path="/login" element={<h1>Login</h1>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
