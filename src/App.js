@@ -58,7 +58,7 @@ export default function App() {
         <DetailedItem
           icon={<SunnyOutline width="36px" height="36px" />}
           title="Your impact"
-          desc="test"
+          desc="Learn statistics such as how much the product is produced a year, how likely it is to be in a landfill vs recycling center, and what the product is composed of."
         />
         <DetailedItem
           icon={<TrophyOutline width="36px" height="36px" />}
@@ -67,8 +67,8 @@ export default function App() {
         />
         <DetailedItem
           icon={<CubeOutline width="36px" height="36px" />}
-          title="Invite your friends"
-          desc="Send an invite, grow a community."
+          title="Invite friends"
+          desc="Grow a community. Help others learn how they can benefit the environment."
         />
       </div>
     </div>
