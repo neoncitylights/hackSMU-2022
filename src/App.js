@@ -67,8 +67,8 @@ export default function App() {
         />
         <DetailedItem
           icon={<CubeOutline width="36px" height="36px" />}
-          title="test"
-          desc="test"
+          title="Invite your friends"
+          desc="Send an invite, grow a community."
         />
       </div>
     </div>
