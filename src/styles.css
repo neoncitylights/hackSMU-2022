@@ -1,0 +1,110 @@
+body {
+  --color-accent: #15116c;
+  --color-green: #60fc70;
+  color: var(--color-accent);
+}
+
+.App {
+  background-color: #a8ff99;
+  background-image: radial-gradient(
+      at 35% 43%,
+      hsla(106, 83%, 76%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 95% 15%, hsla(158, 90%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 46% 55%, hsla(274, 63%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 57% 20%, hsla(198, 62%, 64%, 1) 0px, transparent 50%),
+    radial-gradient(at 32% 6%, hsla(226, 63%, 69%, 1) 0px, transparent 50%),
+    radial-gradient(at 14% 60%, hsla(194, 77%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 12% 9%, hsla(154, 81%, 70%, 1) 0px, transparent 50%);
+  font-family: "Public Sans", sans-serif;
+  height: 100vh;
+}
+
+mark {
+  background: var(--color-green);
+  color: inherit;
+  padding: 0.375rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-items: flex-end;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.app-content {
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+p {
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  gap: 1rem;
+}
+
+.nav-item:hover {
+  font-weight: 700;
+}
+
+.search-bar {
+  background: rgb(255, 255, 255, 0.5);
+  border-radius: 1.5rem;
+  border: 2px solid var(--color-accent);
+  padding: 0.75rem 1.25rem;
+  margin: 1rem;
+  font-size: 1.25rem;
+}
+
+.search-bar:focus {
+  outline: 2px solid (--color-green);
+}
+
+.search-bar {
+  width: 50ch;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+.detailed-item {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.detailed-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailed-content-title {
+  font-size: 1.75rem;
+}
+
+.detailed-icon {
+  background: var(--color-green);
+  margin: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
