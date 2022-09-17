@@ -86,6 +86,14 @@ function ComboBox() {
   )
 }
 
+export function TaggedItem(props) {
+  return (
+    <div className="tagged-item">
+      <div className="tagged-item-icon"></div>
+      {props.text}
+    </div>);
+}
+
 export function Card(props) {
   return (<div className="card">
     <section className="card-cover" id={props.id}>
@@ -142,7 +150,19 @@ export default function App() {
           ecosystems at scale.
         </p>
         <p>What if we can change that?</p>
+        <div class="tags">
+          <TaggedItem text="other" />
+          <TaggedItem text="paper" />
+          <TaggedItem text="glass" />
+          <TaggedItem text="cotton" />
+          <TaggedItem text="polyester" />
+          <TaggedItem text="metal" />
+          <TaggedItem text="electronics" />
+          <TaggedItem text="wood" />
+          <TaggedItem text="plastic" />
+        </div>
         <ComboBox />
+        
       </main>
       <div class="details">
       <DetailedItem

@@ -1,6 +1,4 @@
-
-{
-    "item": [  
+[
        {
           "item-id":1,
           "name": "energy drink can",
@@ -48,7 +46,7 @@
    },
    {
       "item-id":10,
-      "name": "soda_can",
+      "name": "soda can",
       "type": "metal"
    },
    {
@@ -178,8 +176,8 @@
    },
    {
       "item-id":36,
-      "name": "scissors",
-      "type": "metal"
+      "name": "tv remote",
+      "type": "electronics"
    },
    {
       "item-id":37,
@@ -302,6 +300,3 @@
       "type": "metal"
    }
      ]
-
-
- }
