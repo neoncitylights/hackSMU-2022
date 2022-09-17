@@ -87,7 +87,7 @@ function ComboBox() {
               : null}
           </ul>
         </div>
-      )}
+      )};
     </Downshift>
   )
 }
@@ -96,16 +96,16 @@ export function TaggedItem(props) {
   return (
     <div className="tagged-item">
       <div className="tagged-item-icon"></div>
-      {props.text}
+      <Link to={props.link}>{props.text}</Link>
     </div>);
 }
 
 export function Card(props) {
   return (<div className="card">
     <section className="card-cover" id={props.id}>
-      <h1 class="card-title">{props.title}</h1>
+      <h1 className="card-title">{props.title}</h1>
     </section>
-    <section class="card-content">{props.text}</section>
+    <section className="card-content">{props.text}</section>
   </div>);
 }
 
@@ -117,9 +117,9 @@ export function HeaderItem(props) {
 
 export function Header() {
   return (
-    <header class="header">
-      <nav class="header-nav">
-        <ul class="nav-items">
+    <header className="header">
+      <nav className="header-nav">
+        <ul className="nav-items">
           <HeaderItem name="About" link="/about" />
           <HeaderItem name="Projects" link="/projects" />
           <HeaderItem name="Login" link="/login" />
@@ -157,20 +157,20 @@ export function Home() {
         ecosystems at scale.
       </p>
       <p>What if we can change that?</p>
-      <div class="tags">
-        <TaggedItem text="other" />
-        <TaggedItem text="paper" />
-        <TaggedItem text="glass" />
-        <TaggedItem text="cotton" />
-        <TaggedItem text="polyester" />
-        <TaggedItem text="metal" />
-        <TaggedItem text="electronics" />
-        <TaggedItem text="wood" />
-        <TaggedItem text="plastic" />
+      <div className="tags">
+        <TaggedItem text="other" link="/other" />
+        <TaggedItem text="paper" link ="/paper" />
+        <TaggedItem text="glass" link="/glass" />
+        <TaggedItem text="cotton" link="/cotton"/>
+        <TaggedItem text="polyester" link="/polyester" />
+        <TaggedItem text="metal" link="/metal"/>
+        <TaggedItem text="electronics" link="/electronics"/>
+        <TaggedItem text="wood" link = "/wood"/>
+        <TaggedItem text="plastic" link="/plastic"/>
       </div>
       <ComboBox />
     </main>
-    <div class="details">
+    <div className="details">
     <DetailedItem
         icon={<SunnyOutline width="36px" height="36px" color={"#3fc486"} />}
         title="Your impact"
@@ -200,6 +200,15 @@ export default function App() {
             <Route path="/about" element={<h1>About</h1> }/>
             <Route path="/projects" element={<h1>Projects</h1>} />
             <Route path="/login" element={<h1>Login</h1>} />
+            <Route path="/other" element={<div>other</div>} />
+            <Route path="/paper" element={<div>paper</div>} />
+            <Route path="/glass" element={<div>glass</div>} />
+            <Route path="/cotton" element={<div>cotton</div>} />
+            <Route path="/polyester" element={<div>polyester</div>} />
+            <Route path="/metal" element={<div>metal</div>} />
+            <Route path="/electronics" element={<div>electronics</div>} />
+            <Route path="/wood" element={<div>wood</div>} />
+            <Route path="/plastic" element={<div>plastic</div>} />
         </Routes>
       </Router>
     </div>
