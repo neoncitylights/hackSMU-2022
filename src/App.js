@@ -35,8 +35,8 @@ export function DetailedItem(props) {
 export default function App() {
   return (
     <div className="App">
-      <Header />
       <main className="app-content">
+        <Header />
         <h1>
           Creating a <mark>Sustainable</mark> Future
         </h1>
@@ -48,6 +48,7 @@ export default function App() {
           At the same time, our planet is filled with toxic waste that damages
           ecosystems at scale.
         </p>
+        <p>What if we can change that?</p>
         <input
           type="search"
           className="search-bar"
@@ -63,14 +64,21 @@ export default function App() {
         <DetailedItem
           icon={<ChatbubblesOutline width="36px" height="36px" />}
           title="Invite friends"
-          desc="Create your own 100% recycled project from scratch with the help of your friends, and earn points for every recycled item. Compete on a global leaderboard!"
+          desc="Create your own 100% recycled project from scratch with the help of your friends, and earn points for every recycled item."
         />
         <DetailedItem
           icon={<TrophyOutline width="36px" height="36px" />}
           title="Earn awards"
-          desc="Description"
+          desc="Compete on a global leaderboard, make your community proud, and earn awards for your achievements."
         />
       </div>
+      <footer>
+        <nav>
+          <ul>
+            <li>Home</li>
+          </ul>
+        </nav>
+      </footer>
     </div>
   );
 }
