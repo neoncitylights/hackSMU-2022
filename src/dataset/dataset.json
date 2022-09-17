@@ -1,0 +1,43 @@
+[
+	{
+		"item-id": 1,
+		"name": "energy drink can",
+		"type": "metal"
+	},
+	{
+		"item-id": 2,
+		"name": "chocolate bag",
+		"type": "plastic"
+	},
+	{
+		"item-id": 3,
+		"name": "chair",
+		"type": "wood"
+	},
+	{
+		"item-id": 4,
+		"name": "phone",
+		"type": "electronics"
+	},
+	{
+		"item-id": 5,
+		"name": "shirt",
+		"type": "cotton"
+	},
+	{
+		"item-id": 6,
+		"name": "book",
+		"type": "paper"
+	},
+	{
+		"item-id": 7,
+		"name": "glass bottle of wine",
+		"type": "glass"
+	},
+	{
+		"item-id": 8,
+		"name": "pants",
+		"type": "polyester"
+	}
+]
+

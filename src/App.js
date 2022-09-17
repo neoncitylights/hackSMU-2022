@@ -1,6 +1,99 @@
 import "./reset.css";
 import "./styles.css";
-import { SunnyOutline, TrophyOutline, ChatbubblesOutline } from "react-ionicons";
+import {
+  ChatbubblesOutline,
+  SunnyOutline,
+  TrophyOutline,
+} from "react-ionicons";
+import Downshift from 'downshift';
+import classNames from "classnames";
+
+function ComboBox() {
+  const items = require("./dataset/dataset.json");
+
+  return (
+    <Downshift
+      onChange={selection =>
+        alert(
+          selection
+            ? `You selected "${selection.name}" by ${selection.type}. Great Choice!`
+            : 'Selection Cleared',
+        )
+      }
+      itemToString={item => (item ? item.name : '')}
+    >
+      {({
+        getInputProps,
+        getItemProps,
+        getLabelProps,
+        getMenuProps,
+        getToggleButtonProps,
+        isOpen,
+        inputValue,
+        highlightedIndex,
+        selectedItem,
+        getRootProps,
+      }) => (
+        <div className="autocomplete-container">
+          <div className="autocomplete-search-container"
+            {...getRootProps({}, {suppressRefError: true})}>
+            <input
+              placeholder="Your product, e.g PlayStation 4"
+              className="search-bar"
+              {...getInputProps()}
+            />
+            <button
+              aria-label={'toggle menu'}
+              className="autocomplete-button"
+              type="button"
+              {...getToggleButtonProps()}>
+              {isOpen ? <>&#8593;</> : <>&#8595;</>}
+            </button>
+          </div>
+          <ul
+            className="autocomplete-suggestions"
+            {...getMenuProps()}
+          >
+            {isOpen
+              ? items
+                  .filter(
+                    item =>
+                      !inputValue ||
+                      item.name.toLowerCase().includes(inputValue) ||
+                      item.type.toLowerCase().includes(inputValue),
+                  )
+                  .map((item, index) => (
+                    <li
+                      className={classNames(
+                        highlightedIndex === index && 'autocomplete-suggest-item-highlighted',
+                        selectedItem === item && 'autocomplete-suggest-item-selected',
+                        'autocomplete-suggestion',
+                      )}
+                      {...getItemProps({
+                        key: item.name,
+                        index,
+                        item,
+                      })}>
+                      <span className="autocomplete-suggest-title">{item.name}</span>
+                      <span className="autocomplete-suggest-desc">{item.type}</span>
+                    </li>
+                  ))
+              : null}
+          </ul>
+        </div>
+      )}
+    </Downshift>
+  )
+}
+
+export function Card(props) {
+  return (<div className="card">
+    <section className="card-cover" id={props.id}>
+      <h1 class="card-title">{props.title}</h1>
+    </section>
+    <section class="card-content">{props.text}</section>
+  </div>);
+}
 
 export function HeaderItem(props) {
   return <li className="nav-item">{props.name}</li>;
@@ -49,11 +142,7 @@ export default function App() {
           ecosystems at scale.
         </p>
         <p>What if we can change that?</p>
-        <input
-          type="search"
-          className="search-bar"
-          placeholder="Your products, e.g PlayStation 4"
-        />
+        <ComboBox />
       </main>
       <div class="details">
       <DetailedItem
@@ -72,13 +161,6 @@ export default function App() {
           desc="Compete on a global leaderboard, make your community proud, and earn awards for your achievements."
         />
       </div>
-      <footer>
-        <nav>
-          <ul>
-            <li>Home</li>
-          </ul>
-        </nav>
-      </footer>
     </div>
   );
 }
