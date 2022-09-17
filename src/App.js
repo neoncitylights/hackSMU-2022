@@ -55,20 +55,20 @@ export default function App() {
         />
       </main>
       <div class="details">
-        <DetailedItem
+      <DetailedItem
           icon={<SunnyOutline width="36px" height="36px" />}
           title="Your impact"
-          desc="test"
+          desc="Learn statistics such as how much the product is produced a year, how likely it is to be in a landfill vs recycling center, and what the product is composed of."
+        />
+        <DetailedItem
+          icon={<ChatbubblesOutline width="36px" height="36px" />}
+          title="Invite friends"
+          desc="Create your own 100% recycled project from scratch with the help of your friends, and earn points for every recycled item. Compete on a global leaderboard!"
         />
         <DetailedItem
           icon={<TrophyOutline width="36px" height="36px" />}
           title="Earn awards"
-          desc="test"
-        />
-        <DetailedItem
-          icon={<CubeOutline width="36px" height="36px" />}
-          title="test"
-          desc="test"
+          desc="Description"
         />
       </div>
     </div>
