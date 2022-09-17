@@ -1,43 +1,307 @@
-[
-	{
-		"item-id": 1,
-		"name": "energy drink can",
-		"type": "metal"
-	},
-	{
-		"item-id": 2,
-		"name": "chocolate bag",
-		"type": "plastic"
-	},
-	{
-		"item-id": 3,
-		"name": "chair",
-		"type": "wood"
-	},
-	{
-		"item-id": 4,
-		"name": "phone",
-		"type": "electronics"
-	},
-	{
-		"item-id": 5,
-		"name": "shirt",
-		"type": "cotton"
-	},
-	{
-		"item-id": 6,
-		"name": "book",
-		"type": "paper"
-	},
-	{
-		"item-id": 7,
-		"name": "glass bottle of wine",
-		"type": "glass"
-	},
-	{
-		"item-id": 8,
-		"name": "pants",
-		"type": "polyester"
-	}
-]
 
+{
+    "item": [  
+       {
+          "item-id":1,
+          "name": "energy drink can",
+          "type": "metal"
+       },
+       {
+        "item-id":2,
+        "name": "chocolate bag",
+        "type": "plastic"
+     },
+     {
+        "item-id":3,
+        "name": "chair",
+        "type": "wood"
+     },
+     {
+        "item-id":4,
+        "name": "phone",
+        "type": "electronics"
+     },
+     {
+        "item-id":5,
+        "name": "shirt",
+        "type": "cotton"
+     },
+     {
+        "item-id":6,
+        "name": "book",
+        "type": "paper"
+     },
+     {
+        "item-id":7,
+        "name": "glass bottle of wine",
+        "type": "glass"
+     },
+     {
+        "item-id":8,
+        "name": "pants",
+        "type": "polyester"
+     },
+     {
+      "item-id":9,
+      "name": "table",
+      "type": "wood"
+   },
+   {
+      "item-id":10,
+      "name": "soda_can",
+      "type": "metal"
+   },
+   {
+      "item-id": 11,
+      "name": "jacket",
+      "type": "polyester"
+   },
+   {
+      "item-id":12,
+      "name": "watch",
+      "type": "metal"
+   },
+   {
+      "item-id":13,
+      "name": "laptop",
+      "type": "electronics"
+   },
+   {
+      "item-id":14,
+      "name": "headphones",
+      "type": "electronics"
+   },
+   {
+      "item-id":15,
+      "name": "charger",
+      "type": "electronics"
+   },
+   {
+      "item-id":16,
+      "name": "blanket",
+      "type": "cotton"
+   },
+   {
+      "item-id":17,
+      "name": "newspaper",
+      "type": "paper"
+   },
+   {
+      "item-id":18,
+      "name": "steel",
+      "type": "metal"
+   },
+   {
+      "item-id":19,
+      "name": "paper shopping bag",
+      "type": "paper"
+   },
+   {
+      "item-id":20,
+      "name": "shampoo bottle",
+      "type": "plastic"
+   },
+   {
+      "item-id":21,
+      "name": "monitor",
+      "type": "electronics"
+   },
+   {
+      "item-id":22,
+      "name": "box",
+      "type": "paper"
+   },
+   {
+      "item-id":23,
+      "name": "carpet",
+      "type": "other"
+   },
+   {
+      "item-id":24,
+      "name": "projector",
+      "type": "electronics"
+   },
+   {
+      "item-id":25,
+      "name": "shoes",
+      "type": "other"
+   },
+   {
+      "item-id":26,
+      "name": "chips pack",
+      "type": "plastic"
+   },
+   {
+      "item-id":27,
+      "name": "foot ball",
+      "type": "other"
+   },
+   {
+      "item-id":28,
+      "name": "glass bottle of water",
+      "type": "glass"
+   },
+   {
+      "item-id":29,
+      "name": "tablet",
+      "type": "electronics"
+   },
+   {
+      "item-id":30,
+      "name": "bag pack",
+      "type": "cotton"
+   },
+   {
+      "item-id":31,
+      "name": "scissors",
+      "type": "metal"
+   },
+   {
+      "item-id":32,
+      "name": "pack of candy",
+      "type": "plastic"
+   },
+   {
+      "item-id":33,
+      "name": "light bulbs",
+      "type": "glass"
+   },
+   {
+      "item-id":34,
+      "name": "cupboard",
+      "type": "wood"
+   },
+   {
+      "item-id":35,
+      "name": "door",
+      "type": "wood"
+   },
+   {
+      "item-id":36,
+      "name": "scissors",
+      "type": "metal"
+   },
+   {
+      "item-id":37,
+      "name": "mask",
+      "type": "cotton"
+   },
+   {
+      "item-id":38,
+      "name": "hat",
+      "type": "cotton"
+   },
+   {
+      "item-id":39,
+      "name": "marker",
+      "type": "other"
+   },
+   {
+      "item-id":40,
+      "name": "pencil",
+      "type": "wood"
+   },
+   {
+      "item-id":41,
+      "name": "pen",
+      "type": "metal"
+   },
+   {
+      "item-id":42,
+      "name": "food pack",
+      "type": "paper"
+   },
+   {
+      "item-id":43,
+      "name": "toys",
+      "type": "plastic"
+   },
+   {
+      "item-id":44,
+      "name": "stickers",
+      "type": "paper"
+   },
+   {
+      "item-id":45,
+      "name": "glasses",
+      "type": "glass"
+   },
+   {
+      "item-id":46,
+      "name": "flyer",
+      "type": "paper"
+   },
+   {
+      "item-id":47,
+      "name": "eraser",
+      "type": "other"
+   },
+   {
+      "item-id":48,
+      "name": "clothes",
+      "type": "cotton"
+   },
+   {
+      "item-id":49,
+      "name": "ethernet cable",
+      "type": "electronics"
+   },
+   {
+      "item-id":50,
+      "name": "flash drive",
+      "type": "electronics"
+   },
+   {
+      "item-id":51,
+      "name": "rasberry pi",
+      "type": "electronics"
+   },
+   {
+      "item-id":52,
+      "name": "graphics card",
+      "type": "electronics"
+   },
+   {
+      "item-id":53,
+      "name": "jar",
+      "type": "glass"
+   },
+   {
+      "item-id":54,
+      "name": "magazine",
+      "type": "paper"
+   },
+   {
+      "item-id":55,
+      "name": "brochure",
+      "type": "paper"
+   },
+   {
+      "item-id":56,
+      "name": "coloring pencils",
+      "type": "wood"
+   },
+   {
+      "item-id":57,
+      "name": "canvas",
+      "type": "wood"
+   },
+   {
+      "item-id":58,
+      "name": "notebook",
+      "type": "paper"
+   },
+   {
+      "item-id":59,
+      "name": "keychain",
+      "type": "metal"
+   },
+   {
+      "item-id":60,
+      "name": "aluminum",
+      "type": "metal"
+   }
+     ]
+
+
+ }

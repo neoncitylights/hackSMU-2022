@@ -1,10 +1,11 @@
 {
-    "paper" : 1,
-    "glass" : 2,
-    "cotton": 3,
-    "polyester": 4,
-    "metal" : 5,
-    "electronics": 6,
-    "wood": 7,
-    "plastic" : 8
+    "other": 1,
+    "paper" : 2,
+    "glass" : 3,
+    "cotton": 4,
+    "polyester": 5,
+    "metal" : 6,
+    "electronics": 7,
+    "wood": 8,
+    "plastic" : 9
 }
