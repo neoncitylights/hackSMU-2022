@@ -1,6 +1,6 @@
 import "./reset.css";
 import "./styles.css";
-import { SunnyOutline, TrophyOutline, CubeOutline } from "react-ionicons";
+import { SunnyOutline, TrophyOutline, ChatbubblesOutline } from "react-ionicons";
 
 export function HeaderItem(props) {
   return <li className="nav-item">{props.name}</li>;
