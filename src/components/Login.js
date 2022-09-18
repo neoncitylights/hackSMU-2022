@@ -39,7 +39,7 @@ const Login = () => {
     }
     return (
         <>
-            <div className='app-content'>
+            <div className='app-content' style={{height: '100vh'}}>
                 <h2 className='mb-3'>Login</h2>
                 {error && <Alert variant='danger'>{error}</Alert>}
                 <Form onSubmit={handleSubmit}>
@@ -63,21 +63,20 @@ const Login = () => {
                         />
                     </Form.Group>
 
-                        <Button className='autocomplete-button' variant="primary" type="Submit">
-                            <mark>Login</mark>
-                        </Button>
+                    <Button className='autocomplete-button' variant="primary" type="Submit">
+                        Login
+                    </Button>
 
 
                     <div className="p-4 mt-1 text-center">
                         Forgot Password? <Link to="/RecoverPassword">Recover Password</Link>
                     </div>
                 </Form>
-                <hr />
+                <div className="p-4 box mt-3 text-center">
+                    Don't have an account? <Link to="/Register">Sign up</Link>
+                </div>
+            </div>
 
-            </div>
-            <div className="p-4 box mt-3 text-center">
-                Don't have an account? <Link to="/Register">Sign up</Link>
-            </div>
         </>
     )
 };
