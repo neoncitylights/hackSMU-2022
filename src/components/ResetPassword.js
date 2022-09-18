@@ -31,12 +31,14 @@ function ResetPassword() {
 // Using BootStrap Form to strcuture the UI of the recovery box fields and labels
   return (
     <>
-      <div className='p-4 box'>
+      <div className='app-content' style={{height: '100vh'}}>
         <h2 className='mb-3'>Recover Account</h2>
         {error && <Alert variant='success'>Sucess!</Alert>}
         <Form onSubmit={handleSubmit}>
           <Form.Group className='mb-4' controrlId="formBasicEmail">
             <Form.Control
+            className="search-bar"
+            style={{ width: '25ch' }}
               type="email"
               placeholder='Email address'
               onChange={(e) => setEmail(e.target.value)}
@@ -44,15 +46,14 @@ function ResetPassword() {
           </Form.Group>
 
           <div className='d-grid gap-3'>
-            <Button variant="primary" type="Submit">
+            <Button variant="primary" type="Submit" className='autocomplete-button'>
               Send Verification
             </Button>
           </div>
 
         </Form>
-        <hr />
         <div className="p-4 mt-1 text-center">
-          Go back to the <Link to="/">Login Page</Link>
+          Go back to the <Link to="/login">Login Page</Link>
         </div>
       </div>
 

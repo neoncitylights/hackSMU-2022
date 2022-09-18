@@ -30,6 +30,15 @@ a {
   color: #fff;
 }
 
+.autocomplete-button {
+  border: 0;
+  margin: 1rem;
+  font-size: 1rem;
+  font-family: 'Public Sans', sans-serif;
+  padding: .5rem 1rem !important;
+}
+
+.autocomplete-button,
 mark {
   padding: 0.375rem 0.5rem;
   background: var(--color-green);

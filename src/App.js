@@ -1,5 +1,7 @@
 import "./reset.css";
 import "./styles.css";
+import { UserAuthContextProvider } from "./context/UserAuthContext";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,10 +25,9 @@ import Cotton from "./components/Cotton.js";
 import Polyester from "./components/Polyester.js";
 import Electronics from "./components/Electronics.js";
 import Plastic from "./components/Plastic.js";
-
-
-
-
+import Login from "./components/Login";
+import Register from "./components/Register";
+import ResetPassword from "./components/ResetPassword";
 
 function ComboBox() {
   const items = require("./dataset/dataset.json");
@@ -56,7 +57,7 @@ function ComboBox() {
       }) => (
         <div className="autocomplete-container">
           <div className="autocomplete-search-container"
-            {...getRootProps({}, {suppressRefError: true})}>
+            {...getRootProps({}, { suppressRefError: true })}>
             <input
               placeholder="Your product, e.g PlayStation 4"
               className="search-bar"
@@ -76,28 +77,28 @@ function ComboBox() {
           >
             {isOpen
               ? items
-                  .filter(
-                    item =>
-                      !inputValue ||
-                      item.name.toLowerCase().includes(inputValue) ||
-                      item.type.toLowerCase().includes(inputValue),
-                  )
-                  .map((item, index) => (
-                    <li
-                      className={classNames(
-                        highlightedIndex === index && 'autocomplete-suggest-item-highlighted',
-                        selectedItem === item && 'autocomplete-suggest-item-selected',
-                        'autocomplete-suggestion',
-                      )}
-                      {...getItemProps({
-                        key: item.name,
-                        index,
-                        item,
-                      })}>
-                      <span className="autocomplete-suggest-title">{item.name}</span>
-                      <span className="autocomplete-suggest-desc">{item.type}</span>
-                    </li>
-                  ))
+                .filter(
+                  item =>
+                    !inputValue ||
+                    item.name.toLowerCase().includes(inputValue) ||
+                    item.type.toLowerCase().includes(inputValue),
+                )
+                .map((item, index) => (
+                  <li
+                    className={classNames(
+                      highlightedIndex === index && 'autocomplete-suggest-item-highlighted',
+                      selectedItem === item && 'autocomplete-suggest-item-selected',
+                      'autocomplete-suggestion',
+                    )}
+                    {...getItemProps({
+                      key: item.name,
+                      index,
+                      item,
+                    })}>
+                    <span className="autocomplete-suggest-title">{item.name}</span>
+                    <span className="autocomplete-suggest-desc">{item.type}</span>
+                  </li>
+                ))
               : null}
           </ul>
         </div>
@@ -173,19 +174,19 @@ export function Home() {
       <p>What if we can change that?</p>
       <div className="tags">
         <TaggedItem text="other" link="/other" />
-        <TaggedItem text="paper" link ="/paper" />
+        <TaggedItem text="paper" link="/paper" />
         <TaggedItem text="glass" link="/glass" />
-        <TaggedItem text="cotton" link="/cotton"/>
+        <TaggedItem text="cotton" link="/cotton" />
         <TaggedItem text="polyester" link="/polyester" />
-        <TaggedItem text="metal" link="/metal"/>
-        <TaggedItem text="electronics" link="/electronics"/>
-        <TaggedItem text="wood" link = "/wood"/>
-        <TaggedItem text="plastic" link="/plastic"/>
+        <TaggedItem text="metal" link="/metal" />
+        <TaggedItem text="electronics" link="/electronics" />
+        <TaggedItem text="wood" link="/wood" />
+        <TaggedItem text="plastic" link="/plastic" />
       </div>
       <ComboBox />
     </main>
     <div className="details">
-    <DetailedItem
+      <DetailedItem
         icon={<SunnyOutline width="36px" height="36px" color={"#3fc486"} />}
         title="Your impact"
         desc="Learn statistics such as how much the product is produced a year, how likely it is to be in a landfill vs recycling center, and what the product is composed of."
@@ -205,11 +206,21 @@ export function Home() {
   );
 }
 
+export function Projects() {
+  return (
+    <div>
+      <Header />
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <div className="App">
+      <UserAuthContextProvider>
       <Router>
         <Routes>
+          
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<h1>About</h1> }/>
             <Route path="/projects" element={<h1>Projects</h1>} />
@@ -223,8 +234,15 @@ export default function App() {
             <Route path="/electronics" element={<Electronics/>} />
             <Route path="/wood" element={<Wood/>} />
             <Route path="/plastic" element={<Plastic/>} />
+            <Route path="/about" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/Register" element={<Register />} />
+            <Route path="/AccountRecovery" element={<ResetPassword />} />
+            
         </Routes>
       </Router>
+      </UserAuthContextProvider>
     </div>
   );
 }
