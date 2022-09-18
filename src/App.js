@@ -13,6 +13,20 @@ import {
 } from "react-ionicons";
 import Downshift from 'downshift';
 import classNames from "classnames";
+import Other from "./components/Other.js";
+import Paper from "./components/Paper.js";
+import Glass from "./components/Glass.js";
+import Wood from "./components/Wood.js";
+import Metal from "./components/Metal.js";
+import Alluminum from "./components/Alluminum.js";
+import Cotton from "./components/Cotton.js";
+import Polyester from "./components/Polyester.js";
+import Electronics from "./components/Electronics.js";
+import Plastic from "./components/Plastic.js";
+
+
+
+
 
 function ComboBox() {
   const items = require("./dataset/dataset.json");
@@ -200,15 +214,15 @@ export default function App() {
             <Route path="/about" element={<h1>About</h1> }/>
             <Route path="/projects" element={<h1>Projects</h1>} />
             <Route path="/login" element={<h1>Login</h1>} />
-            <Route path="/other" element={<div>other</div>} />
-            <Route path="/paper" element={<div>paper</div>} />
-            <Route path="/glass" element={<div>glass</div>} />
-            <Route path="/cotton" element={<div>cotton</div>} />
-            <Route path="/polyester" element={<div>polyester</div>} />
-            <Route path="/metal" element={<div>metal</div>} />
-            <Route path="/electronics" element={<div>electronics</div>} />
-            <Route path="/wood" element={<div>wood</div>} />
-            <Route path="/plastic" element={<div>plastic</div>} />
+            <Route path="/other" element={<Other />} />
+            <Route path="/paper" element={<Paper/>} />
+            <Route path="/glass" element={<Glass/>} />
+            <Route path="/cotton" element={<Cotton/>} />
+            <Route path="/polyester" element={<Polyester/>} />
+            <Route path="/metal" element={<Metal/>} />
+            <Route path="/electronics" element={<Electronics/>} />
+            <Route path="/wood" element={<Wood/>} />
+            <Route path="/plastic" element={<Plastic/>} />
         </Routes>
       </Router>
     </div>

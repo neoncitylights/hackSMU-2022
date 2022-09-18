@@ -21,6 +21,10 @@ h1 {
   color: var(--color-beige);
   font-weight: 500;
 }
+.centeredDiv{
+    
+    color: black;
+}
 
 a {
   color: #fff;
