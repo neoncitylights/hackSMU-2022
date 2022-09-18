@@ -1,6 +1,9 @@
 import "./reset.css";
 import "./styles.css";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
+import React, {useState} from 'react';
+import {Form, Button} from 'react-bootstrap';
+import { Projects } from "./components/Projects";
 
 import {
   BrowserRouter as Router,
@@ -196,21 +199,16 @@ export function Home() {
   );
 }
 
-export function Projects() {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
-}
+
+
 
 export default function App() {
   return (
     <div className="App">
       <UserAuthContextProvider>
-      <Router>
-        <Routes>
-          
+        <Router>
+          <Routes>
+
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
@@ -227,8 +225,8 @@ export default function App() {
             <Route path="/wood" element={<div>wood</div>} />
             <Route path="/plastic" element={<div>plastic</div>} />
 
-        </Routes>
-      </Router>
+          </Routes>
+        </Router>
       </UserAuthContextProvider>
     </div>
   );
