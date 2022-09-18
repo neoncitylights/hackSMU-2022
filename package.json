@@ -9,6 +9,7 @@
   "main": "src/index.js",
   "dependencies": {
     "@radix-ui/react-hover-card": "^1.0.0",
+    "bootstrap": "^5.2.1",
     "classnames": "^2.3.2",
     "cx": "^22.9.1",
     "downshift": "^6.1.11",

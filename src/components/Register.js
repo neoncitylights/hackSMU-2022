@@ -6,8 +6,7 @@ import { useUserAuth } from '../context/UserAuthContext';
 const Register = () => {
     //Setting the email value
     const [email, setEmail] = useState("");
-    //TODO: Store the Age value of the user
-    const [Age, setAge] = useState("");
+
     //Setting the password value of the user
     const [password, setPassword] = useState("");
 
@@ -49,12 +48,6 @@ const Register = () => {
                         onChange={(e) => setEmail(e.target.value)} />
                     </Form.Group>
 
-                    <Form.Group className='mb-3' controrlId="formBasicAge">
-                        <Form.Control
-                        type="age"
-                        placeholder='Age'
-                        onChange={(e) => setAge(e.target.value)} />
-                    </Form.Group>
 
                     <Form.Group className='mb-3' controrlId="formBasicPassword">
                         <Form.Control
