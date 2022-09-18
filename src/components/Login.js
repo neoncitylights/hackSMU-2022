@@ -69,7 +69,7 @@ const Login = () => {
 
 
                     <div className="p-4 mt-1 text-center">
-                        Forgot Password? <Link to="/RecoverPassword">Recover Password</Link>
+                        Forgot Password? <Link to="/AccountRecovery">Recover Password</Link>
                     </div>
                 </Form>
                 <div className="p-4 box mt-3 text-center">
